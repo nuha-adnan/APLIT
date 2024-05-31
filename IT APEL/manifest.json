@@ -1,0 +1,13 @@
+{
+  "name": "Lernprogram",
+  "short_name": "Lp",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/src/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

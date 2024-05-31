@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lernprogramm</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Nuha Adnan" />
+  <link rel="stylesheet" type="text/css" href="./src/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
+  <link rel="icon" type="image/x-icon" href="./src/icon.png" />
+  <link rel="manifest" href="./manifest.json" />http://127.0.0.1:5500/IT%20APEL/index.html
+</head>
+
+<body>
+  <!---heeader section -->
+  <header>
+    <div class="container">
+      <!--verstanden--->
+      <div id="tabs">
+        <!--id kann id änden  in javascript-->
+        <button class="tab-button" onclick="openTab(event, 'math')">
+          Mathematik
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'internet')">
+          Internettechnologien
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'global')
+          ">
+          Allgemeines Wissen
+        </button>
+        <button class="tab-button" onclick="openTab(event, 'extrnal')
+        ">
+          Externaufgaben
+        </button>
+      </div>
+
+      <div id="progress">
+        <h4>Lernfortschritt</h4>
+
+        <div class="progress-bar">
+          <div id="progress-done"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div id="math" class="tab-content">
+        <h1 class="headline">Mathematik fragen</h1>
+        <h3 id="math-quetion" class="question"></h3>
+        <h3 id="math-quetion-katex" class="question"></h3>
+        <div id="math-options" class="options"></div>
+      </div>
+
+      <div id="internet" class="tab-content">
+        <h1 class="headline">Internettechnologien fragen</h1>
+        <h3 id="internet-quetion" class="question"></h3>
+        <div id="internet-options" class="options"></div>
+      </div>
+
+      <div id="global" class="tab-content">
+        <h1 class="headline">Allgemeines Wissen fragen</h1>
+        <h3 id="global-quetion" class="question"></h3>
+        <div id="global-options" class="options"></div>
+      </div>
+
+      <div id="extrnal" class="tab-content">
+        <h1 class="headline">extrnal</h1>
+        <h3 id="extrnal-quetion" class="question"></h3>
+        <div id="extrnal-options" class="options"></div>
+      </div>
+
+      <div id="statistics">
+        <h1 class="headline">Statistik</h1>
+        <p>Punkt: <span id="result"></span></p>
+
+        <button class="reset" onclick="reset()">Reset</button>
+      </div>
+
+      <div id="name">
+        <h1 class="headline">Nuha Alhamidi </h1>
+        <p>Lernprogramm</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 <strong>HTW Dresden</strong></p>
+    </div>
+    <!-- Include KaTeX JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+    <!-- Include KaTeX auto-render extension (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"
+      integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+    <script src="./src/script.js"></script>
+  </footer>
+</body>
+
+</html>

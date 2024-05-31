@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #001e4d;
+  color: #001e4d;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+header {
+  margin-top: 1rem;
+}
+
+.container {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 50rem;
+  margin: 0 auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 2rem;
+}
+
+#tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 650px) {
+  #tabs {
+    flex-direction: column;
+  }
+}
+
+#progress {
+  display: none;
+}
+
+h4 {
+  margin: 0;
+}
+
+.progress-bar {
+  background: #ededed;
+  height: 1rem;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+#progress-done {
+  background-color: #318c4c;
+  width: 0%;
+  height: 100%;
+  transition: all 0.2s;
+}
+
+.tab-button {
+  background: #fff;
+  color: #001e4d;
+  border: 1px solid #001e4d;
+  padding: 0.7rem 2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-button:hover {
+  background-color: #ededed;
+}
+
+.tab-button.active {
+  background: #001e4d;
+  color: #fff;
+}
+
+.headline {
+  margin: 0;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #001e4d;
+  padding-bottom: 1rem;
+}
+
+.question {
+  font-size: 1rem;
+}
+
+.option-item {
+  padding: 0.7rem;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.option-item.active {
+  background-color: #318c4c;
+  color: #fff;
+}
+
+.option-item.active:hover {
+  background-color: #318c4c;
+  color: #fff;
+}
+
+.option-item:hover {
+  background-color: #ededed;
+}
+
+.reset {
+  background: #001e4d;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#statistics {
+  display: none;
+}
+
+.next:hover {
+  background-color: #00193f;
+}
+
+.tab-content {
+  display: none;
+}
+
+footer p {
+  margin: 0;
+}
+
